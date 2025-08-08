@@ -16,7 +16,8 @@ module.exports = {
       "path": "app",
       "message": [
         "{{(gpu === 'nvidia' ? self.cmds.nvidia : ((gpu === 'amd' && platform === 'linux') ? self.cmds.amd : self.cmds.default))}}",
-        "pip install -r requirements.txt",
+        "uv pip install -r requirements.txt",
+        "uv pip install pydantic==2.10.6"
       ]
     }
   }, {
